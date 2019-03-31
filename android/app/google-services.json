@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1087858601751",
+    "firebase_url": "https://webrtc-demo-f566e.firebaseio.com",
+    "project_id": "webrtc-demo-f566e",
+    "storage_bucket": "webrtc-demo-f566e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087858601751:android:4deb03171cc4ef70",
+        "android_client_info": {
+          "package_name": "com.cloudwebrtc.flutterwebrtcdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1087858601751-k5740hugd529jhrq5dd02as93t6r4ccd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcbgkxSxN5yEZ0_cfYaBS57-CKDfDzcAk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

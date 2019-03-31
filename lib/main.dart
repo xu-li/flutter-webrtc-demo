@@ -5,6 +5,7 @@ import 'src/basic_sample/basic_sample.dart';
 import 'src/call_sample/call_sample.dart';
 import 'src/call_sample/data_channel_sample.dart';
 import 'src/route_item.dart';
+import "package:firebase_core/firebase_core.dart";
 
 void main() => runApp(new MyApp());
 
@@ -114,6 +115,32 @@ class _MyAppState extends State<MyApp> {
             ]));
   }
 
+  _showFirebaseInstanceIDDialog(context) {
+      showDemoDialog<DialogDemoAction>(
+          context: context,
+          child: new AlertDialog(
+              title: const Text('InstaceID: '),
+              content: TextField(
+                  decoration: InputDecoration(
+                      hintText: FirebaseApp.instance.name
+                  ),
+                  textAlign: TextAlign.center,
+              ),
+              actions: <Widget>[
+                  new FlatButton(
+                      child: const Text('CANCEL'),
+                      onPressed: () {
+                          Navigator.pop(context, DialogDemoAction.cancel);
+                      }),
+                  new FlatButton(
+                      child: const Text('CONNECT'),
+                      onPressed: () {
+                          Navigator.pop(context, DialogDemoAction.connect);
+                      })
+              ]));
+
+  }
+
   _initItems() {
     items = <RouteItem>[
       RouteItem(
@@ -130,7 +157,7 @@ class _MyAppState extends State<MyApp> {
           subtitle: 'P2P Call Sample.',
           push: (BuildContext context) {
             _datachannel = false;
-            _showAddressDialog(context);
+            _showFirebaseInstanceIDDialog(context);
           }),
       RouteItem(
           title: 'Data Channel Sample',
